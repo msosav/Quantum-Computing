@@ -72,9 +72,9 @@ This function implements the core logic of Grover's algorithm. Here's a breakdow
     - After each iteration, the state vector is normalized to ensure its elements' probabilities add up to 1. This is crucial to maintain a valid quantum state.
   - **Oracle (Again):**
     - The oracle matrix is applied again to further amplify the marked states.
-  - **Return:**
 
-    - The final state after the Grover iterations represents the probability amplitudes for finding each element in the search space. Measuring this state will likely point to a marked element with high probability.
+- **Return:**
+  - The final state after the Grover iterations represents the probability amplitudes for finding each element in the search space. Measuring this state will likely point to a marked element with high probability.
 
 ## Example Usage
 
