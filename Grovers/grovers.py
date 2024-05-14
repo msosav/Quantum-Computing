@@ -28,7 +28,7 @@ def grovers_algorithm(elements, marked):
 
     oracle_matrix = np.diag(oracle(elements, marked))
 
-    for i in range(num_iterations):
+    for _ in range(num_iterations):
         state = 2 * np.dot(oracle_matrix, state) - state
         state = state / np.linalg.norm(state)
         state = 2 * np.dot(oracle_matrix, state) - state
@@ -37,8 +37,24 @@ def grovers_algorithm(elements, marked):
 
 
 if __name__ == "__main__":
-    elements = [0, 1, 2, 3, 4, 5, 6, 7]
-    marked = [3, 5]
+    print("Grovers Algorithm")
+    print("---------------------------------------------------------")
+
+    num_qubits = 3
+
+    print("Numer of Qubits:", num_qubits)
+
+    elements = [i for i in range(2 ** num_qubits)]
+
+    marked = [0]
 
     probabilities = grovers_algorithm(elements, marked)
-    print(probabilities)
+
+    print("---------------------------------------------------------")
+
+    print("Probabilities:", probabilities)
+
+    print("---------------------------------------------------------")
+
+    print("Max Probability:", max(probabilities),
+          "at index", np.argmax(probabilities))
