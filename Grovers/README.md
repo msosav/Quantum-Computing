@@ -100,3 +100,24 @@ def grover(n, solution_index):
 
     return state
 ```
+
+## Uso
+
+1. Clonar el repositorio:
+
+   ```bash
+   git clone https://github.com/msosav/Quantum-Computing.git
+   cd Quantum-Computing/Grovers
+   ```
+
+1. Instalar las numpy:
+
+   ```bash
+   pip install numpy
+   ```
+
+1. Ejecutar el script:
+
+   ```bash
+   python grover.py
+   ```
